@@ -1,0 +1,9 @@
+{
+  "name": "tcp-nodejs-app",
+  "version": "1.0.0",
+  "main": "server3.js",
+  "scripts": {
+    "start": "node server3.js"
+  },
+  "license": "MIT"
+}

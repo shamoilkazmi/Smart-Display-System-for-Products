@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  min-height: 100%;
+}
+
+
+
+#sunsilk{
+	height:100%;
+	width:100%;
+	background-color:black;
+	position:absolute;
+	top:0%;
+	opacity:0;
+transition: opacity 0.5s ease-in-out;
+}
+#tresme{
+	height:100%;
+	width:100%;
+	background-color:black;
+	position:absolute;
+	top:0%;
+	opacity:0;
+transition: opacity 0.5s ease-in-out;
+
+}
+#ponds{
+	height:100%;
+	width:100%;
+	background-color:black;
+	position:absolute;
+	top:0%;
+	opacity:0;
+transition: opacity 0.5s ease-in-out;
+
+}
+#fairnlovely{
+	height:100%;
+	width:100%;
+	background-color:black;
+	position:absolute;
+	top:0%;
+transition: opacity 0.5s ease-in-out;
+
+        
+	opacity:0;
+}
+#sunsilkTresme{
+	height:100%;
+	width:100%;
+	background-color:black;
+	position:absolute;
+	top:0%;
+transition: opacity 0.5s ease-in-out;
+
+        
+	opacity:0;
+}
+
+#flPonds{
+	height:100%;
+	width:100%;
+	background-color:black;
+	position:absolute;
+	top:0%;
+transition: opacity 0.5s ease-in-out;
+
+        
+	opacity:0;
+}
+.gallery__img{
+    height:100%;
+    width:100%;
+}
+
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+                <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <title>CSS Grids Gallery</title>
+    </head>
+    <body>
+        <video autoplay muted loop id="myVideo">
+  <source src="http://192.168.0.114:3000/images/sunsilk.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>		<div id="sunsilk">
+		 <img src="http://192.168.0.114:3000/images/sunsilk.jpg" alt="Gallery image 1" class="gallery__img">
+		</div>
+		<div id="tresme">
+		 <img src="http://192.168.0.114:3000/images/tresme.jpg" alt="Gallery image 1" class="gallery__img">
+		</div>
+		<div id="ponds">
+		 <img src="http://192.168.0.114:3000/images/ponds.png" alt="Gallery image 1" class="gallery__img" >
+		</div>
+		<div id="fairnlovely">
+		 <img src="http://192.168.0.114:3000/images/fnl.jpg" alt="Gallery image 1" class="gallery__img" >
+		</div>
+                <div id="sunsilkTresme">
+		 <img src="http://192.168.0.114:3000/images/sunsilkTresme.jpg" alt="Gallery image 1" class="gallery__img" >
+		</div>
+                <div id="flPonds">
+		 <img src="http://192.168.0.114:3000/images/flPonds.jpg" alt="Gallery image 1" class="gallery__img" >
+		</div>
+
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script> <!-- include socket.io client side script -->
+<script>
+var socket = io(); //load socket.io-client and connect to the host that serves the page
+//window.addEventListener("load", function(){ //when page loads
+//  var lightbox = document.getElementById("light");
+//  lightbox.addEventListener("change", function() { //add event listener for when checkbox changes
+//    socket.emit("light", Number(this.checked)); //send button status to server (as 1 or 0)
+//  });
+//});
+var sunsilk=0;
+var tresme=0;
+var ponds=0;
+var fairnlovely=0;
+
+socket.on('emit_from_server', function (data) { //get button status from client
+  console.log(data);
+  if(data.includes("sunsilk1")){
+ document.getElementById("sunsilk").style.opacity = 1;
+}
+ if(data.includes("sunsilk0")){
+ document.getElementById("sunsilk").style.opacity = 0;
+}
+
+});
+
+
+
+
+
+
+</script>
+
+		
+    </body>
+</html>
+  document.getElementById("fairnlovely").style.opacity = 1; //change checkbox according to push button on Raspberry Pi
+
+
+
+
+
+
