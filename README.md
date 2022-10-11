@@ -6,9 +6,7 @@ Once a user/customer picks the product item from desk/shelf, the relevant video/
 
 Node.js is used to take inputs from Raspberry Pi's GPIO pins to display the product accordingly on the webpage.
 
-Upwork: 
-
-Youtube: https://youtu.be/pfIlJZ89gBY
+Upwork: https://www.upwork.com/freelancers/~01468db99ff3b7ecc7?p=1577636311586926592
 
 Linkdin: https://www.linkedin.com/in/shamoilkazmi
 
